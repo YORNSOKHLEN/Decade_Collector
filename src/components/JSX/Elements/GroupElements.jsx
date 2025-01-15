@@ -2,6 +2,7 @@ import React from "react";
 import GroupMenu from "./GroupMenu";
 import NavBar from "./NavBar";
 import GroupSerieMovie from "./GroupSerieMovie";
+import GroupProduct from "../Product/GroupProduct";
 
 const GroupElements = () => {
   return (
@@ -11,6 +12,9 @@ const GroupElements = () => {
         <NavBar />
         <div className="flex space-x-8 uppercase text-xl mx-7 py-3 items-center">
           <GroupSerieMovie />
+        </div>
+        <div className="my-9 mx-7 grid grid-cols-4 gap-10">
+          <GroupProduct />
         </div>
       </div>
     </div>

@@ -1,6 +1,4 @@
 import React from "react";
-import GroupSerieMovie from "./GroupSerieMovie";
-
 const SerieMovie = ({
   titleOfSerie: {
     titleSerie,
