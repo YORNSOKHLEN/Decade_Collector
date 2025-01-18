@@ -41,11 +41,11 @@ const GroupProduct = () => {
     },
   ];
   return (
-    <React.Fragment>
+    <div className="my-9 mx-7 grid grid-cols-4 gap-10">
       {productOfMovie.map((p) => {
         return <Product serieProduct={p} key={p.id} />;
       })}
-    </React.Fragment>
+    </div>
   );
 };
 

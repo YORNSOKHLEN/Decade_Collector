@@ -1,85 +1,49 @@
-import React from "react";
 const SerieMovie = ({
-  titleOfSerie: {
-    titleSerie,
-    titleMovie1,
-    titleMovie2,
-    titleMovie3,
-    titleMovie4,
-    titleMovie5,
-    titleMovie6,
-    titleMovie7,
-    titleMovie8,
-    icon,
-    imgMovie,
-  },
+  titleOfSerie: { titleSerie, movies, icon, imgMovie, id },
 }) => {
+  const hoverStyles = {
+    KR: "left-[60px]",
+    MCU: "right-[78px]",
+    DCU: "right-[150px]",
+    SPS: "right-[60px]",
+  };
+
   return (
     <div className="group z-10">
-      <div className="flex gap-2 items-center hover:text-[#38A93B] group-hover:text-[#38A93B]">
+      {/* Series Title with Icon */}
+      <div className="flex gap-1 items-center hover:text-[#38A93B] group-hover:text-[#38A93B]">
         <a href="./KamenRider/KamenRider.html">{titleSerie}</a>
         {icon}
       </div>
-      <div className="absolute mt-0 bg-[#16191E] hidden group-hover:block shadow-lg rounded-lg p-4 gap-5 justify-items-center right-32 left-20 w-auto h-auto">
-        <div className="flex text-lg gap-10">
-          {/* <!-- Column 1 --> */}
-          <div>
-            <a
-              href="./KamenRider/KamenRiderGavv.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie1}
-            </a>
-            <a
-              href="./KamenRiderGotchard.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie2}
-            </a>
-            <a
-              href="./KamenRiderGeats.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie3}
-            </a>
-            <a
-              href="./KamenRiderGeats.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie7}
-            </a>
-          </div>
-          {/* <!-- Column 2 --> */}
-          <div className="mb-2">
-            <a
-              href="./KamenRiderRevice.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie4}
-            </a>
-            <a
-              href="./KamenRiderSaber.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie5}
-            </a>
 
-            <a
-              href="./KamenRiderZero-One.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie6}
-            </a>
-            <a
-              href="./KamenRiderZero-One.html"
-              className="block px-2 py-1 hover:text-[#38A93B] rounded"
-            >
-              {titleMovie8}
-            </a>
+      {/* Dropdown Menu */}
+      <div
+        className={`absolute mt-0 bg-[#16191E] hidden group-hover:block shadow-lg rounded-lg w-auto justify-items-center ${hoverStyles[id]}`}
+      >
+        <div className="flex text-lg gap-4 mx-7 ">
+          {/* Movie Links */}
+          <div className="grid grid-cols-2 gap-x-5 space-y-0">
+            {movies &&
+              movies.map((movie, id) => (
+                <a
+                  key={id}
+                  href={movie.link}
+                  className="block hover:text-[#38A93B] rounded"
+                >
+                  {movie.title}
+                </a>
+              ))}
           </div>
-          <div>
-            <img src={imgMovie} className="w-[300px] rounded-lg" />
-          </div>
+          {/* Image */}
+          {imgMovie && (
+            <div>
+              <img
+                src={imgMovie}
+                alt={titleSerie}
+                className="w-[300px] rounded-lg"
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
