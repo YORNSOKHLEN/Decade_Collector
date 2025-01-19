@@ -23,7 +23,30 @@ const Footer = () => {
         <div className="flex gap-28">
           <div>
             <h2 className="text-2xl font-bold uppercase">More Series</h2>
-            <a href="#1" className="left-0 mt-3 flex gap-2 items-center"></a>
+            <a
+              href="#1"
+              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
+            >
+              Godzilla
+            </a>
+            <a
+              href="#1"
+              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
+            >
+              Transformers
+            </a>
+            <a
+              href="#1"
+              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
+            >
+              Ultraman
+            </a>
+            <a
+              href="#1"
+              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
+            >
+              Power Rangers
+            </a>
           </div>
           <div>
             <h2 className="text-2xl font-bold">PAYMENT</h2>
