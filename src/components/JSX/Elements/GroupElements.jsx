@@ -6,7 +6,7 @@ import GroupProduct from "../Product/GroupProduct";
 import Footer from "./Footer";
 const GroupElements = () => {
   return (
-    <div className="w-full mt-[90px] flex justify-between">
+    <div className="w-full mt-[90px] flex">
       <GroupMenu />
       <div className="w-full ml-[60px]">
         <NavBar />
