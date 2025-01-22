@@ -1,12 +1,13 @@
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 import Menu from "./Menu";
 
 const GroupMenu = () => {
-  const [activeItem, setActiveItem] = useState("home-icon");
+  const location = useLocation();
   const menuIcons = [
     {
       id: "home-icon",
-      link: "#",
+      link: "/home",
       icon: <i className="fas fa-home text-[24px] text-[#38A93B]"></i>,
     },
     {
@@ -16,7 +17,7 @@ const GroupMenu = () => {
     },
     {
       id: "shop-icon",
-      link: "#",
+      link: "/card",
       icon: (
         <i className="fas fa-basket-shopping text-[24px] text-[#38A93B]"></i>
       ),
@@ -27,9 +28,16 @@ const GroupMenu = () => {
       icon: <i className="fas fa-info-circle text-[24px] text-[#38A93B]"></i>,
     },
   ];
-  const handleMenuClick = (id) => {
-    setActiveItem(id); // Update the active item
+  const getActiveItem = () => {
+    if (location.pathname === "/home") {
+      return "home-icon";
+    } else if (location.pathname === "/card") {
+      return "shop-icon";
+    }
+    //home page
+    return "home-icon";
   };
+  const activeItem = getActiveItem();
 
   return (
     <React.Fragment>
@@ -42,7 +50,7 @@ const GroupMenu = () => {
             key={item.id}
             item={item}
             isActive={item.id === activeItem}
-            onClick={handleMenuClick}
+            onClick={() => {}}
           />
         ))}
       </div>

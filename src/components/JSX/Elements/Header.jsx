@@ -2,6 +2,7 @@ import React from "react";
 import iconSort from "../../../assets/icon/sort.png";
 import LogoWhite from "../../../assets/images/Logo/Logo-White.png";
 import Profile from "../../../assets/images/Logo/Profile.jpg";
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <React.Fragment>
@@ -15,9 +16,9 @@ const Header = () => {
               <img src={iconSort} alt="Menu"></img>
             </button>
             <div>
-              <a href="#">
+              <Link to={"/home"}>
                 <img src={LogoWhite} alt="Logo" className="h-[88px]" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="right-0 justify-items-start w-[350px] ">
