@@ -12,7 +12,7 @@ const GroupMenu = () => {
     },
     {
       id: "heart-icon",
-      link: "#",
+      link: "/fav",
       icon: <i className="fas fa-heart text-[24px] text-[#38A93B]"></i>,
     },
     {
@@ -24,7 +24,7 @@ const GroupMenu = () => {
     },
     {
       id: "about-icon",
-      link: "#",
+      link: "/about",
       icon: <i className="fas fa-info-circle text-[24px] text-[#38A93B]"></i>,
     },
   ];
