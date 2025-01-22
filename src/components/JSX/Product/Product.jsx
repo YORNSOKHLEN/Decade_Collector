@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Product = ({ serieProduct: { old_pic, new_pic, Detail, Price } }) => {
   const [currentPic, setCurrentPic] = useState(old_pic);
@@ -8,7 +9,7 @@ const Product = ({ serieProduct: { old_pic, new_pic, Detail, Price } }) => {
         in stock
       </div>
       <div className="grid justify-items-center">
-        <a href="">
+        <Link to={"/detail-decade"}>
           <img
             src={currentPic}
             alt=""
@@ -17,7 +18,7 @@ const Product = ({ serieProduct: { old_pic, new_pic, Detail, Price } }) => {
             onMouseOver={() => setCurrentPic(new_pic)}
             onMouseOut={() => setCurrentPic(old_pic)}
           />
-        </a>
+        </Link>
       </div>
       <div>
         <span className="flex-grow text-base text-gray-300">{Detail}</span>
