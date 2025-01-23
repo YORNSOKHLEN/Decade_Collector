@@ -3,7 +3,7 @@ const SerieMovie = ({
 }) => {
   const hoverStyles = {
     KR: "left-[60px]",
-    MCU: "right-[78px]",
+    MCU: "right-[85px]",
     DCU: "right-[150px]",
     SPS: "right-[60px]",
   };
@@ -20,7 +20,7 @@ const SerieMovie = ({
       <div
         className={`absolute mt-0 bg-[#16191E] hidden group-hover:block shadow-lg rounded-lg w-auto justify-items-center ${hoverStyles[id]}`}
       >
-        <div className="flex text-lg gap-4 mx-7 ">
+        <div className="flex text-lg gap-4 ml-7 ">
           {/* Movie Links */}
           <div className="grid grid-cols-2 gap-x-5 space-y-0">
             {movies &&

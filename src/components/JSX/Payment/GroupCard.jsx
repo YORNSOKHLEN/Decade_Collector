@@ -76,7 +76,7 @@ const GroupCard = () => {
           Taxes and shipping calculated at checkout
         </p>
         <div className="mx-2 my-4">
-          <Link to={"#"}>
+          <Link to={"/shopping"}>
             <button className="bg-[#38A93B] w-full py-4 rounded-2xl hover:bg-gray-900 ">
               Checkout
             </button>
