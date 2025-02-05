@@ -1,6 +1,7 @@
 import React from "react";
 import Tycoon2 from "../../../assets/images/KamenRider/Geats/Tycoon1/Tycoon2.png";
 import { Link } from "react-router-dom";
+import GroupItem from "../Product/GroupItem";
 // Correctly import the image
 
 const Shopping = () => {
@@ -8,56 +9,13 @@ const Shopping = () => {
     <div className="max-w-7xl mx-auto pt-8 pb-3 flex">
       <div className="w-1/2 border-r border-gray-700 pr-8 mx-5">
         <div className="flex mb-6 gap-40">
-          <Link to={"card"}>
+          <Link to={"/card"}>
             <i className="fas fa-arrow-left text-white mr-4 cursor-pointer mb-1 top-0"></i>
           </Link>
           <h2 className="text-xl font-semibold mb-6">Order Summary</h2>
         </div>
-
-        {/* Item 1 */}
-        <div className="mb-4 flex items-center justify-between mx-5">
-          <div className="flex gap-5">
-            <img
-              src={Tycoon2}
-              alt="Black Image"
-              className="w-[80px] h-[80px] mr-4"
-            />
-            <div className="justify-items-start">
-              <p>Black Panther</p>
-              <div className="flex items-center text-gray-300 mt-4">
-                <button className="px-2 py-1 bg-gray-800 rounded-l">-</button>
-                <span className="px-2 py-1 bg-gray-700">1</span>
-                <button className="px-2 py-1 bg-gray-800 rounded-r">+</button>
-              </div>
-            </div>
-          </div>
-          <div className="justify-items-center">
-            <p className="text-sm text-white">$65.00</p>
-            <i className="fas fa-trash mt-5"></i>
-          </div>
-        </div>
-
-        {/* Item 2 */}
-        <div className="mb-4 flex items-center justify-between mx-5">
-          <div className="flex gap-5">
-            <img
-              src={Tycoon2}
-              alt="Black Image"
-              className="w-[80px] h-[80px] mr-4"
-            />
-            <div className="justify-items-start">
-              <p>Black Panther</p>
-              <div className="flex items-center text-gray-300 mt-4">
-                <button className="px-2 py-1 bg-gray-800 rounded-l">-</button>
-                <span className="px-2 py-1 bg-gray-700">2</span>
-                <button className="px-2 py-1 bg-gray-800 rounded-r">+</button>
-              </div>
-            </div>
-          </div>
-          <div className="justify-items-center">
-            <p className="text-sm text-white">$95.00</p>
-            <i className="fas fa-trash mt-5"></i>
-          </div>
+        <div>
+          <GroupItem />
         </div>
 
         {/* Discount Code */}
@@ -87,22 +45,18 @@ const Shopping = () => {
             <span>$160.00</span>
           </div>
           <div className="flex justify-between">
-            <span>Sales tax (6.5%)</span>
-            <span>$4.23</span>
-          </div>
-          <div className="flex justify-between">
             <span>Shipping Fee</span>
             <span className="text-[#38A93B]">FREE</span>
           </div>
         </div>
         <div className="flex justify-between text-lg font-semibold mx-5">
           <span>Total due</span>
-          <span className="text-blue-500">$164.23</span>
+          <span className="text-blue-500">$160.00</span>
         </div>
       </div>
 
       {/* Shipping Details */}
-      <div className="w-1/2 pl-8">
+      <div className="w-1/2 pl-8 pr-5">
         {/* Progress Steps */}
         <div className="mb-6 flex items-center text-gray-300 justify-between">
           <span className="mr-4 text-[#38A93B]">Shipping</span>

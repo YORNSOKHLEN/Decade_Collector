@@ -10,6 +10,7 @@ import Facebook from "../../../assets/icon/facebook.png";
 import Tiktok from "../../../assets/icon/tiktok.png";
 import Instagram from "../../../assets/icon/instagram.png";
 import Youtube from "../../../assets/icon/youtube.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -81,9 +82,9 @@ const Footer = () => {
               Got a question or need help? Reach <br />
               out to us at
               <span> </span>
-              <a href="./home.html" className="text-[#38A93B] underline">
+              <Link to={"/home"} className="text-[#38A93B] underline">
                 decadecollector.com
-              </a>
+              </Link>
               <br />
               For returns, please use the following <br />
               address: Box 351, Hamburg PA 19526

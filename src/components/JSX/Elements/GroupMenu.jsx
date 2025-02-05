@@ -33,6 +33,10 @@ const GroupMenu = () => {
       return "home-icon";
     } else if (location.pathname === "/card") {
       return "shop-icon";
+    } else if (location.pathname === "/fav") {
+      return "heart-icon";
+    } else if (location.pathname === "/about") {
+      return "about-icon";
     }
     //home page
     return "home-icon";

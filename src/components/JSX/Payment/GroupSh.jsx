@@ -5,11 +5,9 @@ import Footer from "../Elements/Footer";
 const GroupSh = () => {
   return (
     <>
-      <div className="w-full mt-[90px] flex">
-        <div className="w-full ml-[60px]">
-          <Shopping />
-          <Footer />
-        </div>
+      <div className="w-full mt-3">
+        <Shopping />
+        <Footer />
       </div>
     </>
   );

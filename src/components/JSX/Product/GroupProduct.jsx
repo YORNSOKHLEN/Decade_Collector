@@ -19,7 +19,7 @@ import Ohger2 from "../../../assets/images/SuperSentai/KingOhger/KingOhger1/King
 const GroupProduct = () => {
   const productOfMovie = [
     {
-      id: "GS",
+      id: "G1",
       old_pic: Geats1,
       new_pic: Geats2,
       Detail: "DX Desire Driver",
@@ -74,7 +74,7 @@ const GroupProduct = () => {
       old_pic: Ohger1,
       new_pic: Ohger2,
       Detail: "DX Henshinken OhgerCalibur",
-      Price: "$45.00",
+      Price: "$65.00",
     },
   ];
   return (
