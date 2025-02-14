@@ -5,7 +5,7 @@ const Menu = ({ item, isActive }) => {
     <div
       className={`py-4 px-4 cursor-pointer ${isActive ? "bg-[#16191E]" : ""}`}
     >
-      <Link to={item.link}>{item.icon}</Link>
+      <Link to={"{item.link}"}>{item.icon}</Link>
     </div>
   );
 };

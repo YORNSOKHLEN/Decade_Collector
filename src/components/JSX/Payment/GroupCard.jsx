@@ -83,52 +83,6 @@ const GroupCard = () => {
                   <div className="items-center">$ {subtotal.toFixed(2)}</div>
                 </td>
               </tr>
-              <tr>
-                <td className="py-3">
-                  <div className="flex gap-5 items-center">
-                    <img
-                      src={Decade}
-                      className="h-[130px] px-1"
-                      alt="DX Neo Decade Driver"
-                    />
-                    <div className="grid gap-1">
-                      <Link
-                        to={"/detail-decade"}
-                        className="hover:text-[#38A93B] font-medium"
-                      >
-                        DX Neo Decade Driver & K-Touch 21
-                      </Link>
-                      <span className="uppercase w-fit py-1 px-2 text-white rounded-sm bg-[#38A93B]">
-                        In Stock
-                      </span>
-                      <span className="text-blue-500 text-lg">${price}</span>
-                    </div>
-                  </div>
-                </td>
-                <td className="px-10">
-                  <div className="flex items-center justify-center text-white border-2 border-gray-900 rounded-sm px-2">
-                    <button
-                      onClick={handleDecrement}
-                      className="px-1 py-1 rounded-l"
-                    >
-                      -
-                    </button>
-                    <span className="px-5 py-1">{quantity}</span>
-                    <button
-                      onClick={handleIncrement}
-                      className="px-1 py-1 rounded-r"
-                    >
-                      +
-                    </button>
-                  </div>
-                  <button className="mt-2 text-gray-500 mx-2 hover:text-[#38A93B] ">
-                    Remove
-                  </button>
-                </td>
-                <td className="px-10">
-                  <div className="items-center">$ {subtotal.toFixed(2)}</div>
-                </td>
-              </tr>
             </tbody>
           </table>
         </div>
