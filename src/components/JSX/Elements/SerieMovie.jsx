@@ -1,6 +1,6 @@
-const SerieMovie = ({
-  titleOfSerie: { titleSerie, movies, icon, imgMovie, id },
-}) => {
+import { Link } from "react-router-dom";
+
+const SerieMovie = ({ titleSerie, link, movies, icon, imgMovie, id }) => {
   const hoverStyles = {
     KR: "left-[60px]",
     MCU: "right-[85px]",
@@ -12,7 +12,7 @@ const SerieMovie = ({
     <div className="group z-10">
       {/* Series Title with Icon */}
       <div className="flex gap-1 items-center hover:text-[#38A93B] group-hover:text-[#38A93B]">
-        <a href="./KamenRider/KamenRider.html">{titleSerie}</a>
+        <Link to={link}>{titleSerie}</Link>
         {icon}
       </div>
 
@@ -25,13 +25,13 @@ const SerieMovie = ({
           <div className="grid grid-cols-2 gap-x-5 space-y-0">
             {movies &&
               movies.map((movie, id) => (
-                <a
+                <Link
                   key={id}
-                  href={movie.link}
+                  to={movie.link}
                   className="block hover:text-[#38A93B] rounded"
                 >
                   {movie.title}
-                </a>
+                </Link>
               ))}
           </div>
           {/* Image */}

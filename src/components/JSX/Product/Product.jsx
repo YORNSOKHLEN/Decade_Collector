@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Product = ({ serieProduct: { old_pic, new_pic, Detail, Price } }) => {
+const Product = ({ old_pic, new_pic, Detail, Price }) => {
   const [currentPic, setCurrentPic] = useState(old_pic);
+  const [color, setColor] = useState(false);
+
   return (
     <article className="mb-7 hover:scale-110 transition-transform duration-300 flex flex-col">
       <div className="uppercase py-1 mb-3 flex justify-center rounded-sm bg-[#38A93B]">
@@ -28,8 +30,16 @@ const Product = ({ serieProduct: { old_pic, new_pic, Detail, Price } }) => {
           <span className="font-bold text-2xl">{Price}</span>
         </div>
         <div className="text-xl flex gap-2">
-          <button id="top1">
-            <i className="fas fa-heart"></i>
+          <button
+            onClick={() => {
+              setColor(!color);
+            }}
+          >
+            <i
+              className={`fas fa-heart ${
+                color === true ? `text-[#38A93B]` : `text-white`
+              }`}
+            ></i>
           </button>
           <button>
             <i className="fas fa-link"></i>

@@ -8,27 +8,27 @@ import Acleda from "../../../assets/images/Logo/acleda.jpg";
 const GroupCard = () => {
   const [quantity, setQuantity] = useState(1);
   const price = 150;
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-  const handleIncrement = () => {
-    setQuantity(quantity + 1);
-  };
+  // const handleDecrement = () => {
+  //   if (quantity > 1) {
+  //     setQuantity(quantity - 1);
+  //   }
+  // };
+  // const handleIncrement = () => {
+  //   setQuantity(quantity + 1);
+  // };
   const subtotal = price * quantity;
   const subtotalkh = subtotal * 4100;
   return (
     <>
-      <div className=" flex gap-3 mx-7 mt-8">
-        <div>
-          <table className=" border-2 border-gray-900">
+      <div className=" flex gap-3 mx-7 mt-8  ">
+        <div className="w-2/3">
+          <table className=" border-2 border-gray-900 w-full">
             <thead>
               <tr>
                 <td className=" px-10 py-3 border-b-2 border-gray-900 text-2xl font-thin">
                   Product
                 </td>
-                <td className=" px-10 py-3 border-b-2 border-gray-900 text-2xl font-thin">
+                <td className=" px-10 py-3 border-b-2 border-gray-900 text-2xl font-thin ">
                   Quantity
                 </td>
                 <td className=" px-10 py-3 border-b-2 border-gray-900 text-2xl font-thin">
@@ -39,7 +39,7 @@ const GroupCard = () => {
             <tbody>
               <tr>
                 <td className="py-3">
-                  <div className="flex gap-5 items-center">
+                  <div className="flex gap-5 items-center pr-5">
                     <img
                       src={Decade}
                       className="h-[130px] px-1"
@@ -60,16 +60,20 @@ const GroupCard = () => {
                   </div>
                 </td>
                 <td className="px-10">
-                  <div className="flex items-center justify-center text-white border-2 border-gray-900 rounded-sm px-2">
+                  <div className="flex items-center justify-center text-white border-2 border-gray-900 rounded-sm px-5">
                     <button
-                      onClick={handleDecrement}
+                      onClick={() => {
+                        if (quantity > 1) {
+                          setQuantity(quantity - 1);
+                        }
+                      }}
                       className="px-1 py-1 rounded-l"
                     >
                       -
                     </button>
                     <span className="px-5 py-1">{quantity}</span>
                     <button
-                      onClick={handleIncrement}
+                      onClick={() => setQuantity(quantity + 1)}
                       className="px-1 py-1 rounded-r"
                     >
                       +
@@ -86,8 +90,8 @@ const GroupCard = () => {
             </tbody>
           </table>
         </div>
-        <div>
-          <table className=" border-2 border-gray-900">
+        <div className="w-1/3">
+          <table className=" border-2 border-gray-900 w-full">
             <thead>
               <tr>
                 <td className="px-10 py-3 border-b-2 border-gray-900 text-2xl font-thin">
@@ -98,7 +102,7 @@ const GroupCard = () => {
             <tbody>
               <tr>
                 <td>
-                  <div className="px-5 py-5 flex justify-between">
+                  <div className="px-5 py-5 flex justify-start gap-10">
                     <h2>USD {subtotal.toFixed(2)}</h2>
                     <h2>=</h2>
                     <h2>KHR {subtotalkh}</h2>
@@ -119,36 +123,27 @@ const GroupCard = () => {
                       <p>100% Secure Payments</p>
                     </span>
                     <div className="flex gap-1 justify-center pb-3">
-                      <a
-                        href="#1"
-                        className="left-0 mt-3 flex gap-2 items-center"
-                      >
+                      <span className="left-0 mt-3 flex gap-2 items-center">
                         <img
                           src={Khqr}
                           alt="KHQR"
                           className="w-[50px] h-[40px] bg-white rounded-md"
                         />
-                      </a>
-                      <a
-                        href="#1"
-                        className="left-0 mt-3 flex gap-2 items-center"
-                      >
+                      </span>
+                      <span className="left-0 mt-3 flex gap-2 items-center">
                         <img
                           src={Aba}
                           alt="ABA"
                           className="w-[40px] h-[40px] rounded-md"
                         />
-                      </a>
-                      <a
-                        href="#1"
-                        className="left-0 mt-3 flex gap-2 items-center"
-                      >
+                      </span>
+                      <span className="left-0 mt-3 flex gap-2 items-center">
                         <img
                           src={Acleda}
                           alt="ACLEDA"
                           className="w-[40px] h-[40px] rounded-md"
                         />
-                      </a>
+                      </span>
                     </div>
                   </div>
                 </td>
