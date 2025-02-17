@@ -21,6 +21,7 @@ const productOfMovie = [
     new_pic: Geats2,
     Detail: "DX Desire Driver",
     Price: "$85.00",
+    link: "/detail-geats",
   },
   {
     id: "TC",
@@ -28,6 +29,7 @@ const productOfMovie = [
     new_pic: Tycoon2,
     Detail: "DX Bujin Sword Raise Buckle",
     Price: "$95.00",
+    link: "/detail-tycoon",
   },
   {
     id: "DC",
@@ -35,6 +37,7 @@ const productOfMovie = [
     new_pic: Decade2,
     Detail: "DX Neo Decade Driver & K-Touch 21",
     Price: "$160.00",
+    link: "/detail-decade",
   },
   {
     id: "HB",
@@ -42,6 +45,7 @@ const productOfMovie = [
     new_pic: Hb2,
     Detail: "DLX Infinity Saga Hulkbuster Armor",
     Price: "$135.00",
+    link: "/detail-hulkbuster",
   },
   {
     id: "MF",
@@ -50,6 +54,7 @@ const productOfMovie = [
     Detail:
       "Banpresto x Bandai: Jujutsu Kaisen - Jukon no Kata Megumi Fushiguro",
     Price: "$45.00",
+    link: "/detail-fushiguro",
   },
   {
     id: "SF",
@@ -57,6 +62,7 @@ const productOfMovie = [
     new_pic: Sukuna2,
     Detail: "Banpresto x Bandai: Jujutsu Kaisen - Kaisen Sukuna Figure",
     Price: "$45.00",
+    link: "/detail-sukuna",
   },
   {
     id: "IH",
@@ -65,6 +71,7 @@ const productOfMovie = [
     Detail:
       "Demon Slayer Kimetsu No Yaiba - Grandista Inosuke Hashibira Figure",
     Price: "$45.00",
+    link: "/detail-inosuke",
   },
   {
     id: "KO",
@@ -72,6 +79,7 @@ const productOfMovie = [
     new_pic: Ohger2,
     Detail: "DX Henshinken OhgerCalibur",
     Price: "$65.00",
+    link: "/detail-kingohger",
   },
 ];
 export default productOfMovie;

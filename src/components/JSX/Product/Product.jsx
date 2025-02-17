@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Product = ({ old_pic, new_pic, Detail, Price }) => {
+const Product = ({ old_pic, new_pic, Detail, Price, link }) => {
   const [currentPic, setCurrentPic] = useState(old_pic);
   const [color, setColor] = useState(false);
 
@@ -11,7 +11,7 @@ const Product = ({ old_pic, new_pic, Detail, Price }) => {
         in stock
       </div>
       <div className="grid justify-items-center">
-        <Link to={"/detail-decade"}>
+        <Link to={link}>
           <img
             src={currentPic}
             alt=""
@@ -48,7 +48,7 @@ const Product = ({ old_pic, new_pic, Detail, Price }) => {
       </div>
       <div className="mt-4 items-center py-3 border-[1px] rounded-xl hover:border-[#38A93B] hover:text-[#38A93B]">
         <button href="#" className="w-full flex justify-around uppercase">
-          Add to cart <i className="fas fa-basket-shopping"></i>
+          Add to cart <i className="fas fa-basket-shopping mt-1"></i>
         </button>
       </div>
     </article>

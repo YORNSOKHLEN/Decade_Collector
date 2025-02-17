@@ -31,6 +31,8 @@ const NavBar = () => {
       return "Kamen Rider Zi-o";
     } else if (location.pathname === "/kamen-rider-build") {
       return "Kamen Rider Build";
+    } else if (location.pathname === "/detail-decade") {
+      return "Kamen Rider Decade";
     }
     //home page
     return "Home";
@@ -38,7 +40,7 @@ const NavBar = () => {
   const activeMenu = getActiveMenu();
   return (
     <div className="bg-[#16191E] top-0 py-[13.5px]">
-      <h1 className="mx-7 text-2xl">{activeMenu}</h1>
+      <h1 className="mx-7 text-2xl uppercase">{activeMenu}</h1>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import NavBar from "./components/JSX/Elements/NavBar";
 import GroupSerieMovie from "./components/JSX/Elements/GroupSerieMovie";
 import GroupProduct from "./components/JSX/Product/GroupProduct";
 import Footer from "./components/JSX/Elements/Footer";
+import Poster from "./components/JSX/Elements/Poster";
 
 const MainHome = () => {
   return (
@@ -15,6 +16,7 @@ const MainHome = () => {
         <div className="w-full ml-[60px]">
           <NavBar />
           <GroupSerieMovie />
+          <Poster />
           <GroupProduct />
           <Footer />
         </div>

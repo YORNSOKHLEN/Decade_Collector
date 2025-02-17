@@ -11,6 +11,7 @@ import Tiktok from "../../../assets/icon/tiktok.png";
 import Instagram from "../../../assets/icon/instagram.png";
 import Youtube from "../../../assets/icon/youtube.png";
 import { Link } from "react-router-dom";
+import MoreSeries from "../../JS/moreSeries";
 
 const Footer = () => {
   return (
@@ -24,30 +25,15 @@ const Footer = () => {
         <div className="flex gap-28">
           <div>
             <h2 className="text-2xl font-bold uppercase">More Series</h2>
-            <a
-              href="#1"
-              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
-            >
-              Godzilla
-            </a>
-            <a
-              href="#1"
-              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
-            >
-              Transformers
-            </a>
-            <a
-              href="#1"
-              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
-            >
-              Ultraman
-            </a>
-            <a
-              href="#1"
-              className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
-            >
-              Power Rangers
-            </a>
+            {MoreSeries.map((ms) => (
+              <Link
+                to={ms.link}
+                key={ms.id}
+                className="left-0 mt-3 flex gap-2 items-center hover:text-[#38A93B]"
+              >
+                {ms.title}
+              </Link>
+            ))}
           </div>
           <div>
             <h2 className="text-2xl font-bold">PAYMENT</h2>
